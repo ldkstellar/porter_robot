@@ -17,7 +17,7 @@ class ImagePublisher(Node):
 
         timer_period = 0.1
         self.timer = self.create_timer(timer_period, self.timer_callback)
-        # 여기 코드는 분석좀 해야될듯 욜로를 같이 써야함 
+        # 욜로로 색깔나오잖아그걸로 빨간색으로 추론해서 빨간색 객체찾아서 좌표를 보내는 형태로 만들면 될듯 
         self.cap = cv2.VideoCapture(0)
         self.br = CvBridge()
         self.cx = 0
