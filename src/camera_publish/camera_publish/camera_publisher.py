@@ -12,7 +12,7 @@ class CameraPublisher(Node):
         super().__init__('image_publisher')
 
         # 1. 두 개의 퍼블리셔 생성
-        self.publisher_img = self.create_publisher(Image, 'video_frames', 10)
+        #self.publisher_img = self.create_publisher(Image, 'video_frames', 10)
         self.publisher_xy = self.create_publisher(Xy, 'red_center', 10)
 
         timer_period = 0.1
