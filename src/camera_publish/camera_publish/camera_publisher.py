@@ -7,7 +7,7 @@ import cv2
 import numpy as np
 from camera_interfaces import Xy  # 커스텀 메시지 import
 
-class ImagePublisher(Node):
+class CameraPublisher(Node):
     def __init__(self):
         super().__init__('image_publisher')
 
@@ -83,3 +83,22 @@ class ImagePublisher(Node):
                 cv2.circle(img, (cx, cy), 5, (0, 0, 255), -1)
 
         return img, cx, cy
+
+def main(args=None):
+    """메인 함수"""
+    # ROS2 초기화
+    rclpy.init(args=args)
+
+    # 노드 생성
+    camera_publisher = CameraPublisher()
+
+    # 노드 실행 (무한 루프, Ctrl+C로 종료)
+    rclpy.spin(camera_publisher)
+
+    # 노드 종료 처리
+    camera_publisher.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
