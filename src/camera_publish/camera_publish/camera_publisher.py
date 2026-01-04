@@ -17,6 +17,7 @@ class ImagePublisher(Node):
 
         timer_period = 0.1
         self.timer = self.create_timer(timer_period, self.timer_callback)
+        # 여기 코드는 분석좀 해야될듯 욜로를 같이 써야함 
         self.cap = cv2.VideoCapture(0)
         self.br = CvBridge()
         self.cx = 0
