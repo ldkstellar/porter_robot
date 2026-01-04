@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "/home/workspace/Documents/mac_to_linux/project/install/camera_interfaces/local/lib/python3.10/dist-packages"
+    ],
+}

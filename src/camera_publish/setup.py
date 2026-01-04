@@ -23,7 +23,7 @@ setup(
         ],
     },
     entry_points={
-        'console_scripts': [
+        'console_scripts': ['camera_pub = camera_publish.camera_publisher:main'
         ],
     },
 )
